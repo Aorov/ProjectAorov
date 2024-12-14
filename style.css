@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1600px;
+    height: 100vh;
+    background-color: lightblue;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/evg.jpg"); 
+    opacity: 0.8;
+    z-index: -1; 
+}  
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.left-image {
+    width: 35px;
+    height: 0 auto;
+    margin: 0 0px;
+}
+
+.right-image {
+    width: 70px;
+    height: 0 auto;
+    margin: 0 0px;
+}
+
+.text-center {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+.page {
+    display: flex; /* Для выравнивания содержимого */
+    flex-direction: column; /* Элементы располагаются по вертикали */
+    justify-content: center; /* Центр по вертикали */
+    align-items: center; /* Центр по горизонтали */
+    text-align: center; /* Выравнивание текста по центру */
+    height: 100vh; /* Высота контейнера на всю высоту окна */
+    margin: 0 auto; /* Центрирует блок горизонтально */
+    padding: 80px; /* Отступы внутри контейнера */
+    box-sizing: border-box; /* Учитывает padding в размерах */
+
+}
+.info {
+    display: flex;
+    justify-content: center;
+    font-size: 3em;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff7a18, #af002d, #319197, #ffd700);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Делает текст прозрачным, чтобы проявлялся фон */
+    animation: gradient-animation 3s infinite ease-in-out;
+    font-size: 1.5rem;
+    margin-bottom:110px;
+    padding:60px;
+}
+
+.dost {
+    display:flex;
+    align-items: center; 
+    color:black;
+    font-size: 1.9rem; /* Размер шрифта для текста */
+    line-height: 1.6; /* Межстрочный интервал для читаемости */
+    max-width: 800px; /* Ограничивает ширину текста  */
+    color: rgb(0, 0, 0); /* Цвет текста */
+
+
+}
+
+.obr {
+    text-align: center;
+    font-size: 30px;
+    color:darkblue;
+}
+.tg {
+    display:block;
+    text-align: center;
+}
+.Email {
+    display:block;
+    text-align: center;
+}
+.tg , .Email {
+    font-size:20px;
+    margin:10px;
+}
+.inf {
+    display:flex;
+    align-items: center;
+    font-size:1.9rem;
+    line-height: 1.6;
+    margin:20px;
+    /* max-width:800px; */
+}
+.hh {
+    font-size: 30px;
+}
+.ini {
+    font-size: 25px;
+    display:block;
+    text-align: center;
+}
+.kurs {
+    text-align: center;
+}
+.kyrs {
+    display: flex;
+    flex-direction: column; /* Размещает элементы в колонку */
+    align-items: center; /* Выравнивает элементы по центру по горизонтали */
+    justify-content: center; /* Выравнивает элементы по центру по вертикали */
+    margin-top: 20px; /* Добавляет отступ сверху */
+}
+
+.pris {
+    font-size: 25px;
+    margin-bottom: 10px; /* Добавляет отступ между текстом и кнопкой */
+}
+
+.btn {
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #45a049; /* Изменение цвета кнопки при наведении */
+}
+
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+@media screen and (max-width: 850px) {
+    .info {
+        margin:20px;
+    }
+    .inf {
+        font-size:25px;
+        margin:10px;
+    }
+
+    .tg, .Email, .inf, .hh, .ini, .pris {
+        font-size: 16px; /* Уменьшение текста */
+        margin:10px;
+    }
+    .inf {
+        padding:20px;
+        margin:30px;
+    }
+    .dost {
+        font-size:15px;
+        margin:0px;
+    }
+    .ini {
+        font-size: 18px;
+    }
+
+    .kyrs {
+        padding: 15px; /* Отступы для мобильных */
+    }
+
+    .btn {
+        font-size: 14px; /* Уменьшение размера кнопки */
+        padding: 8px 12px;
+    }
+
+    body {
+        margin: 0; /* Убираем лишние отступы для iPhone */
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .obr {
+        font-size: 20px; 
+    }
+    .dost {
+        font-size:19px;
+    }
+
+    .hh {
+        font-size: 24px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+}
